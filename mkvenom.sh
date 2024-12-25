@@ -5,7 +5,7 @@ export LPORT="7070"
 export OUTPUT_DIR="payloads"
 
 # create the output directory if it doesn't exist
-if [ -d $OUTPUT_DIR ]; then
+if [ ! -d $OUTPUT_DIR ]; then
   mkdir $OUTPUT_DIR
   echo "[*] Created output directory = $OUTPUT_DIR"
 else
