@@ -14,6 +14,6 @@ else
 	echo "[*] Using provided port: $1"
 fi
 
-echo "[*] Running Python web server..."
+echo "[*] Running Python web server (Ctrl + C, to kill)..."
 python -m http.server $PORT
 echo "Done."
